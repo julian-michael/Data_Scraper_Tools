@@ -2,7 +2,11 @@
 
 A powerful Chrome Extension and Selenium-based automation tool that extracts real-time data from any website using HTML classes and IDs, automatically saving the data in structured JSON files.
 
-![Data Scraper Demo](./img/demo.png)
+![Data Scraper Demo](./img/Screenshot-2025102310.png)
+![Data Scraper Demo](./img/Screenshot-20251023102.png)
+![Data Scraper Demo](./img/Screenshot-2025102310265.png)
+
+
 
 ## Features
 
