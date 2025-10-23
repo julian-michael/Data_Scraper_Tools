@@ -1,0 +1,89 @@
+<!-- File: templates/popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="header">
+        <h3>🕷️ Web Scraper</h3>
+        <p>Extract data from current page</p>
+    </div>
+    
+    <div class="tab-container">
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="scrape">Scrape</button>
+            <button class="tab-button" data-tab="config">Config</button>
+        </div>
+        
+        <div class="tab-content">
+            <!-- Scrape Tab -->
+            <div id="scrape-tab" class="tab-pane active">
+                <button id="scrapeBtn">🚀 Start Scraping</button>
+                <button id="stopBtn" style="display: none;">🛑 Stop Scraping</button>
+                
+                <div id="status" class="status info">
+                    Ready to scrape...
+                </div>
+                
+                <div id="results" class="results" style="display: none;">
+                    <strong>📊 Results:</strong>
+                    <div id="resultsContent"></div>
+                </div>
+            </div>
+            
+            <!-- Config Tab -->
+            <div id="config-tab" class="tab-pane">
+                <div class="config-section">
+                    <h4>Text Selectors</h4>
+                    <textarea id="textSelectors" placeholder="p, h1, h2, h3, div, span" rows="3"></textarea>
+                </div>
+                
+                <div class="config-section">
+                    <h4>Image Selectors</h4>
+                    <textarea id="imageSelectors" placeholder="img" rows="2"></textarea>
+                </div>
+                
+                <div class="config-section">
+                    <h4>Link Selectors</h4>
+                    <textarea id="linkSelectors" placeholder="a" rows="2"></textarea>
+                </div>
+                
+                <div class="config-section">
+                    <h4>Table Selectors</h4>
+                    <textarea id="tableSelectors" placeholder="table" rows="2"></textarea>
+                </div>
+                
+                <div class="config-section">
+                    <h4>Custom Selectors</h4>
+                    <textarea id="customSelectors" placeholder=".product, .price, [data-role], #specific-id" rows="3"></textarea>
+                    <small>Enter custom CSS selectors (comma separated)</small>
+                </div>
+                
+                <div class="config-options">
+                    <label><input type="checkbox" id="extractText" checked> Extract Text</label>
+                    <label><input type="checkbox" id="extractImages" checked> Extract Images</label>
+                    <label><input type="checkbox" id="extractLinks" checked> Extract Links</label>
+                    <label><input type="checkbox" id="extractTables" checked> Extract Tables</label>
+                    <label><input type="checkbox" id="extractCustom" checked> Extract Custom</label>
+                </div>
+                <label>Page Type:</label>
+                <select id="pageType">
+                    <option value="static">Static (One-time scrape)</option>
+                    <option value="dynamic">Dynamic (Continuous scrape)</option>
+                </select>
+
+                <label>Dynamic Interval (ms):</label>
+                <input type="number" id="intervalMs" value="3000" min="500">
+
+                                
+                <button id="saveConfig">💾 Save Configuration</button>
+                <button id="resetConfig">🔄 Reset to Default</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
