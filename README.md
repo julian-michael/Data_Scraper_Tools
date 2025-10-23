@@ -30,3 +30,27 @@ A powerful Chrome Extension and Selenium-based automation tool that extracts rea
 ```bash
 # Install all required libraries from requirements.txt
 pip install -r requirements.txt
+
+# Run the main application
+python3 main.py
+# or
+python main.py
+
+Data_Scraper_Tools/
+│
+├── main.py                 # Main application entry point
+├── requirements.txt        # Python dependencies
+├── config.json            # Configuration settings
+├── img/                   # Images and screenshots
+│   ├── demo.png
+│   └── workflow.png
+├── chrome_extension/      # Chrome extension files
+│   ├── manifest.json
+│   ├── content.js
+│   └── popup.html
+├── selenium_scripts/      # Selenium automation scripts
+│   ├── scraper.py
+│   └── utils.py
+└── output/               # Generated JSON files
+    ├── scraped_data_1.json
+    └── scraped_data_2.json
